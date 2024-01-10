@@ -1,21 +1,21 @@
 <template>
-    <div class="flex items-center justify-center h-screen bg-gray-100">
-      <div class="w-1/3 bg-white p-8 rounded-md shadow-md">
+    <div class="flex max-w-lg mx-auto items-center justify-center h-screen bg-gray-100">
+      <div class="w-full bg-white p-8 rounded-md shadow-md">
         <div class="flex justify-center">
-          <p>
+          <p class="">
             <img src="../assets/logo.png" alt="" class="w-20" />
             Inscription
           </p>
         </div>
         <form @submit.prevent="submit" class="mt-6 mb-7">
           <div>
-            <label for="name" class="block text-xl font-medium text-gray-700">
-              Username
+            <label for="name" class="block  font-medium text-gray-700">
+              Nom d'utilisateur
             </label>
             <input
               id="name"
               type="text"
-              class="mt-3 py-3 p-2 border  border-gray-300 rounded-md block w-full"
+              class="mt-3 py-2 p-2 border  border-gray-300 rounded-md block w-full"
               v-model="form.userName"
               required
               autofocus
@@ -23,46 +23,46 @@
             />
           </div>
           <div class="mt-4">
-            <label for="email" class="block text-xl font-medium text-gray-700">
+            <label for="email" class="block  font-medium text-gray-700">
               Email
             </label>
             <input
               id="email"
               type="email"
-              class="mt-3 py-3 p-2 border  border-gray-300 rounded-md block w-full"
+              class="mt-3 py-2 p-2 border  border-gray-300 rounded-md block w-full"
               v-model="form.email"
               required
               autocomplete="username"
             />
           </div>
           <div class="mt-4">
-            <label for="password" class="block text-xl font-medium text-gray-700">
-              Password
+            <label for="password" class="block  font-medium text-gray-700">
+              Mot de passe
             </label>
             <input
               id="password"
               type="password"
-              class="mt-3 py-3 p-2 border  border-gray-300 rounded-md block w-full"
+              class="mt-3 py-2 p-2 border  border-gray-300 rounded-md block w-full"
               v-model="form.password"
               required
               autocomplete="new-password"
             />
           </div>
           <div class="mt-4">
-            <label for="password_confirmation" class="block text-xl font-medium text-gray-700">
-              Confirm Password
+            <label for="password_confirmation" class="block  font-medium text-gray-700">
+              Confirmer mot de passe
             </label>
             <input
               id="password_confirmation"
               type="password"
-              class="mt-3 py-3 p-2 border  border-gray-300 rounded-md block w-full"
+              class="mt-3 py-2 p-2 border  border-gray-300 rounded-md block w-full"
               v-model="form.password_confirmation"
               required
               autocomplete="new-password"
             />
           </div>
           <div class="flex items-center justify-between mt-6">
-            <div class="text-xl text-gray-600 hover:text-gray-900">
+            <div class=" text-gray-600 hover:text-gray-900">
               <button @click="handleLoginClick" :disabled="isLoading" class="underline cursor-pointer focus:outline-none">
                 {{ isLoading ? 'Chargement...' : 'J\'ai un compte' }}
               </button>
@@ -108,4 +108,8 @@
     }
   };
   </script>
+
+<style>
+
+</style>
   

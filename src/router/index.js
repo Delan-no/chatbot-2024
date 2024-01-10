@@ -14,14 +14,14 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
+    // {
+    //   path: '/dashboard',
+    //   name: 'dashboard',
+    //   component: DashboardAdmin
+    // },
     {
-      path: '/dashboard',
-      name: 'dashboard',
-      component: DashboardAdmin
-    },
-    {
-      path: '/dashboard',
-      name: 'dashboard',
+      path: '/scenario',
+      name: 'scenario',
       component: DashboardAdmin
     },
     {

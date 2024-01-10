@@ -6,7 +6,7 @@
                     <div class="flex justify-between h-16">
                         <div class="flex items-center">
                             <div class="shrink-0 flex items-center">
-                                <router-link :to="{name: 'dashboard'}">
+                                <router-link :to="{name: 'scenario'}">
                                     ChatBot
                                 </router-link>
                             </div>
@@ -24,7 +24,7 @@
                                         <div v-if="showUserDropdown"
                                             class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg">
                                             <router-link :to="{name: 'profil'}"
-                                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</router-link>
+                                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profil</router-link>
                                             <form method="post" as="button" @submit.prevent="logout">
                                                 <button type="submit"
                                                     class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Déconnexion</button>
@@ -89,17 +89,17 @@
                 aria-label="Sidebar">
                 <div class="h-full w-60 px-3 py-4  bg-white">
                     <ul class="font-medium ml-5">
-                        <li class="pt-2">
-                            <button class="flex gap-2 items-center">
-                                <i class="fas fa-tachometer-alt"></i>
-                                Tableau de bord 
-                            </button>
-                        </li>
                         <li class="pt-3">
                             <button class="flex gap-2 items-center">
                                 <i class="fas fa-building"></i>
-                                Scénarios
+                                Tableau de bord 
                             </button>
+                        </li>
+                        <li class="pt-2">
+                            <router-link :to="{name: 'scenario'}" class="flex gap-2 items-center">
+                                <i class="fas fa-tachometer-alt"></i>
+                                Scénarios
+                            </router-link>
                         </li>
                         <li class="pt-3">
                             <button class="flex gap-2 items-center">
