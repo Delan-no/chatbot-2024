@@ -10,8 +10,8 @@
                     <label for="name" class="block  font-medium text-gray-700">
                         Nom d'utilisateur
                     </label>
-                    <input id="name" type="text" class="mt-3 py-3 p-2 border  border-gray-300 rounded-md block w-full"
-                        v-model="form.userName" required autofocus autocomplete="name" />
+                    <input id="name" type="text" class="mt-3 py-3 p-2 text-sm border  border-gray-300 rounded-md block w-full"
+                        v-model="form.userName" required autofocus autocomplete="name" placeholder="Entrez votre nom d'utilisateur" />
                 </div>
 
                 <div class="mt-4">
@@ -19,8 +19,8 @@
                         Mot de passe
                     </label>
                     <input id="password" type="password"
-                        class="mt-3 py-3 p-2 border  border-gray-300 rounded-md block w-full" v-model="form.password"
-                        required autocomplete="new-password" />
+                        class="mt-3 py-3 p-2 text-sm border  border-gray-300 rounded-md block w-full" v-model="form.password"
+                        required autocomplete="new-password" placeholder="Entrez votre mot de passe"/>
                 </div>
 
                 <div class="flex justify-between mt-6">

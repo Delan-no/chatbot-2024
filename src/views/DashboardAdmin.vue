@@ -7,8 +7,8 @@ const isModalOpen = ref(false);
 
 const newScenario = ref({
     title: '',
-    fin:'',
-    debut:'',
+    fin: '',
+    debut: '',
     description: '',
 
 });
@@ -36,7 +36,7 @@ const createScenario = () => {
     closeModal();
     scenarios.value.push(newScenario);
     console.log(scenarios.value)
-    
+
 };
 
 </script>
@@ -503,41 +503,80 @@ const createScenario = () => {
         </div>
 
 
-    <!-- Modal pour ajouter un scénario -->
-    <div v-show="isModalOpen"
-        class="fixed top-0 left-0 z-50 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
-        <form @submit.prevent="createScenario"
-            class="animation bg-white border relative border-primary md:max-w-2xl m-auto pt-6 shadow-lg text-green-900 placeholder-green-700 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full pr-8 dark:bg-gray-100 dark:border-primary">
-            <span @click="closeModal" class="absolute top-5 right-5 cursor-pointer">Fermer</span>
-            <div class="m-4 w-full tailleChang">
-                <h1 class="text-xl font-bold mb-4 text-black">Ajouter un Scénario</h1>
-            </div>
-            <div class="m-4 w-full tailleChang">
-                <label class="block text-gray-700 font-bold mb-2 ">Titre du scénario</label>
-                <input v-model="newScenario.title" type="text" name="title" placeholder="Entrez le titre " required
-                    class="shadow-md border-4 border-black mr-2 appearance-none rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-none">
-            </div>
-            <div class="m-4 w-full tailleChang">
-                <label class="block text-gray-700 font-bold mb-2 ">Mot du début</label>
-                <input v-model="newScenario.debut" type="text" name="debut" placeholder="Entrez le mot du début " required
-                    class="shadow-md border-4 border-black mr-2 appearance-none rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-none">
-            </div>
-            <div class="m-4 w-full tailleChang">
-                <label class="block text-gray-700 font-bold mb-2 ">Mot de fin</label>
-                <input v-model="newScenario.fin" type="text" name="fin" placeholder="Entrez le mot de fin " required
-                    class="shadow-md border-4 border-black mr-2 appearance-none rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-none">
-            </div>
-            <div class="m-4 w-full tailleChang">
-                <label class="block text-gray-700 font-bold mb-2 ">Description du scénario :</label>
-                <textarea v-model="newScenario.description" name="description" placeholder="Entrez la description"
-                    required
-                    class="shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-none h-20"></textarea>
-            </div>
-            <div class="flex justify-end">
-                <button type="submit"
-                    class="bg-blue-600 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline m-8">Valider</button>
-            </div>
-        </form>
-    </div>
+        <!-- Modal pour ajouter un scénario -->
+        <div v-show="isModalOpen"
+            class="fixed top-0 left-0 z-50 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
+            <form @submit.prevent="createScenario"
+                class="animation bg-white border relative border-primary md:max-w-2xl m-auto pt-6 shadow-lg text-green-900 placeholder-green-700 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full pr-8 dark:bg-gray-100 dark:border-primary">
+                <span @click="closeModal" class="absolute top-5 right-5 cursor-pointer">Fermer</span>
+                <div class="m-4 w-full tailleChang">
+                    <h1 class="text-xl font-bold mb-4 text-black">Ajouter un Scénario</h1>
+                </div>
+                <div class="m-4 w-full tailleChang">
+                    <label class="block text-gray-700 font-bold mb-2 ">Titre du scénario</label>
+                    <input v-model="newScenario.title" type="text" name="title" placeholder="Entrez le titre " required
+                        class="shadow-md border-4 border-black mr-2 appearance-none rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-none">
+                </div>
+                <div class="m-4 w-full tailleChang">
+                    <label class="block text-gray-700 font-bold mb-2 ">Description du scénario :</label>
+                    <textarea v-model="newScenario.description" name="description" placeholder="Entrez la description"
+                        required
+                        class="shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-none h-20"></textarea>
+                </div>
+                <div class="m-4 w-full tailleChang">
+                    <label class="block text-gray-700 font-bold mb-2 ">Mot du début</label>
+                    <input v-model="newScenario.debut" type="text" name="debut" placeholder="Entrez le mot du début "
+                        required
+                        class="shadow-md border-4 border-black mr-2 appearance-none rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-none">
+                </div>
+                <div class="m-4 w-full tailleChang">
+                    <label class="block text-gray-700 font-bold mb-2 ">Mot de fin</label>
+                    <input v-model="newScenario.fin" type="text" name="fin" placeholder="Entrez le mot de fin " required
+                        class="shadow-md border-4 border-black mr-2 appearance-none rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-none">
+                </div>
+                <div class="flex justify-end">
+                    <button type="submit"
+                        class="bg-blue-600 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline m-8">Valider</button>
+                </div>
+            </form>
+        </div>
+        <!-- Modal pour modifier un scénario -->
+        <div v-show="isModalOpen"
+            class="fixed top-0 left-0 z-50 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
+            <form @submit.prevent="createScenario"
+                class="animation bg-white border relative border-primary md:max-w-2xl m-auto pt-6 shadow-lg text-green-900 placeholder-green-700 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full pr-8 dark:bg-gray-100 dark:border-primary">
+                <span @click="closeModal" class="absolute top-5 right-5 cursor-pointer">Fermer</span>
+                <div class="m-4 w-full tailleChang">
+                    <h1 class="text-xl font-bold mb-4 text-black">Ajouter un Scénario</h1>
+                </div>
+                <div class="m-4 w-full tailleChang">
+                    <label class="block text-gray-700 font-bold mb-2 ">Titre du scénario</label>
+                    <input v-model="newScenario.title" type="text" name="title" placeholder="Entrez le titre " required
+                        class="shadow-md border-4 border-black mr-2 appearance-none rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-none">
+                </div>
+                <div class="m-4 w-full tailleChang">
+                    <label class="block text-gray-700 font-bold mb-2 ">Description du scénario :</label>
+                    <textarea v-model="newScenario.description" name="description" placeholder="Entrez la description"
+                        required
+                        class="shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-none h-20"></textarea>
+                </div>
+                <div class="m-4 w-full tailleChang">
+                    <label class="block text-gray-700 font-bold mb-2 ">Mot du début</label>
+                    <input v-model="newScenario.debut" type="text" name="debut" placeholder="Entrez le mot du début "
+                        required
+                        class="shadow-md border-4 border-black mr-2 appearance-none rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-none">
+                </div>
+                <div class="m-4 w-full tailleChang">
+                    <label class="block text-gray-700 font-bold mb-2 ">Mot de fin</label>
+                    <input v-model="newScenario.fin" type="text" name="fin" placeholder="Entrez le mot de fin " required
+                        class="shadow-md border-4 border-black mr-2 appearance-none rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-none">
+                </div>
+                <div class="flex justify-end">
+                    <button type="submit"
+                        class="bg-blue-600 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline m-8">Valider</button>
+                </div>
+            </form>
+        </div>
 
-</AuthenticatedLayoutAdmin></template>
+    </AuthenticatedLayoutAdmin>
+</template>

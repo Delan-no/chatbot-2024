@@ -15,9 +15,10 @@
             <input
               id="name"
               type="text"
-              class="mt-3 py-2 p-2 border  border-gray-300 rounded-md block w-full"
+              class="mt-3 py-2 text-sm p-2 border  border-gray-300 rounded-md block w-full"
               v-model="form.userName"
               required
+              placeholder="Entrez votre nom d'utilisateur"
               autofocus
               autocomplete="name"
             />
@@ -29,9 +30,10 @@
             <input
               id="email"
               type="email"
-              class="mt-3 py-2 p-2 border  border-gray-300 rounded-md block w-full"
+              class="mt-3 py-2 p-2 text-sm border  border-gray-300 rounded-md block w-full"
               v-model="form.email"
               required
+              placeholder="Entrez votre Email"
               autocomplete="username"
             />
           </div>
@@ -42,9 +44,10 @@
             <input
               id="password"
               type="password"
-              class="mt-3 py-2 p-2 border  border-gray-300 rounded-md block w-full"
+              class="mt-3 py-2 p-2 text-sm border  border-gray-300 rounded-md block w-full"
               v-model="form.password"
               required
+              placeholder="Entrez votre mot de passe"
               autocomplete="new-password"
             />
           </div>
@@ -55,9 +58,10 @@
             <input
               id="password_confirmation"
               type="password"
-              class="mt-3 py-2 p-2 border  border-gray-300 rounded-md block w-full"
+              class="mt-3 py-2 p-2 text-sm border  border-gray-300 rounded-md block w-full"
               v-model="form.password_confirmation"
               required
+              placeholder="Confirmez votre mot de passe"
               autocomplete="new-password"
             />
           </div>
